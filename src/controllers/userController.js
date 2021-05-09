@@ -26,6 +26,19 @@ exports.fetchUser = (req, res) => {
     })
 }
 
+// fetch all data
+exports.fetchUsers = (req, res) => {
+    User.find({}, (err, users) => {
+        if (err) {
+            return res.status(500).json({ message: err });
+        } else if (users.length === 0) {
+            return res.status(404).json({ message: "No users found"});
+        } else {
+            return res.status(200).json({ message: "Users retrieved successfully", data: users });
+        }
+    })
+}
+
 // Update the data created
 exports.updateUser = (req, res) => {
     User.findByIdAndUpdate(req.params.id, {
