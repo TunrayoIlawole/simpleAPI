@@ -32,4 +32,6 @@ Made for the Zuri Backend NodeJS track.
 
 - [@Tunrayo](https://github.com/TunrayoIlawole)
 
+## Hosted link
+https://simple-api-crud-98.herokuapp.com/users
   
